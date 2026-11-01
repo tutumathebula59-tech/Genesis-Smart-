@@ -1,0 +1,14 @@
+[Unit]
+Description=Genesis Smart Home hub
+After=network-online.target mosquitto.service
+Wants=network-online.target
+
+[Service]
+User=genesis
+WorkingDirectory=/opt/genesis
+EnvironmentFile=/etc/genesis.env
+ExecStart=/opt/genesis/venv/bin/uvicorn hub_core:app --host 0.0.0.0 --port 8000
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

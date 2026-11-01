@@ -1,0 +1,34 @@
+appId: com.bipdiversity.genesis
+productName: B.I.P Diversity Genesis
+copyright: Copyright © 2026 B.I.P Diversity
+
+directories:
+  output: release
+  buildResources: assets
+
+files:
+    - dist/**/*
+    - electron/**/*
+    - package.json
+
+win:
+  target: nsis
+  icon: assets/icon.ico
+
+linux:
+  target: deb
+  icon: assets/icon.png
+  category: Utility
+
+mac:
+  target: dmg
+  icon: assets/icon.icns
+
+nsis:
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+  createDesktopShortcut: true
+
+# APK is built via Capacitor, not electron-builder
+# Run: npx cap add android && npx cap open android
+# Then build APK in Android Studio

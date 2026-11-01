@@ -1,0 +1,11 @@
+{
+  "appId": "com.genesis.smarthome",
+  "appName": "Genesis Smart Home",
+  "webDir": "dist",
+  "server": {
+    "url": "http://genesis.local:8000",
+    "cleartext": true,
+    "allowNavigation": ["genesis.local", "*.local", "192.168.*"]
+  },
+  "android": { "allowMixedContent": true }
+}

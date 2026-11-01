@@ -5,9 +5,9 @@ name: Python application
 
 on:
   push:
-    branches: [ node24 ]
+   branches: [ main]
   pull_request:
-    branches: [ main.js]
+    branches: [main]
 
 permissions:
   contents: read

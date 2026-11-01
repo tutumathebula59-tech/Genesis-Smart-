@@ -1,0 +1,33 @@
+{
+  "mqtt": {
+    "host": "localhost", "port": 1883, "user": "", "password": "",
+    "z2m_base": "zigbee2mqtt", "zwave_base": "zwave", "frigate_base": "frigate"
+  },
+  "matter": { "enabled": true, "url": "ws://localhost:5580/ws" },
+  "alerts": {
+    "ntfy_url": "http://localhost:2586", "ntfy_topic": "genesis-alerts",
+    "siren_device": "", "siren_seconds": 120
+  },
+  "cameras": [
+    { "id": "front", "name": "Front gate", "rtsp": "rtsp://user:pass@192.168.1.50:554/stream1" }
+  ],
+  "go2rtc_port": 1984,
+  "energy": {
+    "interval_s": 60, "tariff_per_kwh": 3.0, "currency": "R",
+    "topics": {
+      "solar_w": "inverter/pv_power",
+      "load_w": "inverter/load_power",
+      "grid_w": "inverter/grid_power",
+      "battery_w": "inverter/battery_power",
+      "battery_soc": "inverter/battery_soc",
+      "grid_ok": "inverter/grid_ok"
+    }
+  },
+  "loadshedding": {
+    "provider": "local", "esp_token": "", "esp_area_id": "",
+    "pre_action_minutes": 15, "shed_devices": [], "shed_if_battery_below": [],
+    "battery_min_soc": 30, "thermostat_setback": 3, "thermostats": []
+  },
+  "wifi": { "iface": "", "hotspot_ssid": "Genesis-Hub", "hotspot_password": "", "auto_fallback": true },
+  "backup": { "keep": 14, "hour": 2, "usb_path": "" }
+}
